@@ -1,19 +1,21 @@
 package com.baeldung.spring.session;
 
+import brave.Span;
+import brave.Tracer;
+import brave.Tracer.SpanInScope;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.scheduling.annotation.Async;
 import org.springframework.stereotype.Service;
 
-import brave.Span;
-import brave.Tracer;
-import brave.Tracer.SpanInScope;
+import java.util.concurrent.CopyOnWriteArrayList;
 
 @Service
 public class SleuthService {
     private Logger logger = LoggerFactory.getLogger(this.getClass());
     private final Tracer tracer;
+     CopyOnWriteArrayList l = new CopyOnWriteArrayList();
 
     @Autowired
     public SleuthService(Tracer tracer) {
@@ -23,6 +25,7 @@ public class SleuthService {
     public void doSomeWorkSameSpan() throws InterruptedException {
         Thread.sleep(1000L);
         logger.info("Doing some work");
+
     }
 
     public void doSomeWorkNewSpan() throws InterruptedException {
@@ -33,7 +36,7 @@ public class SleuthService {
             Thread.sleep(1000L);
             logger.info("I'm in the new span doing some cool work that needs its own span");
         } finally {
-        	newSpan.finish();
+            newSpan.finish();
         }
 
         logger.info("I'm in the original span");
