@@ -310,7 +310,7 @@
         <pact.version>3.5.11</pact.version>
         <source.version>1.8</source.version>
         <target.version>1.8</target.version>
-        <junit.version>4.12</junit.version>
+        <junit.version>4.13.1</junit.version>
         <maven.version>3.7.0</maven.version>
     </properties>
 
