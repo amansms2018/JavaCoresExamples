@@ -115,7 +115,7 @@
         <version.liberty-maven-plugin>3.1</version.liberty-maven-plugin>
         <version.maven-dependency-plugin>2.10</version.maven-dependency-plugin>
         <version.maven-war-plugin>3.2.3</version.maven-war-plugin>
-        <version.junit>4.12</version.junit>
+        <version.junit>4.13.1</version.junit>
         <version.yasson>1.0.5</version.yasson>
         <version.cxf-rt-rs-client>3.2.6</version.cxf-rt-rs-client>
         <version.javax.json>1.0.4</version.javax.json>
