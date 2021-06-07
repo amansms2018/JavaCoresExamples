@@ -149,7 +149,7 @@
 
     <properties>
         <restx.version>0.35-rc4</restx.version>
-        <logback-classic.version>1.2.3</logback-classic.version>
+        <logback-classic.version>1.2.0</logback-classic.version>
     </properties>
 
 </project>
