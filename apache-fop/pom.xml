@@ -81,7 +81,7 @@
     </build>
 
     <properties>
-        <fop.version>1.1</fop.version>
+        <fop.version>2.2</fop.version>
         <avalon-framework.version>4.3</avalon-framework.version>
         <dbdoclet.version>8.0.2</dbdoclet.version>
         <jtidy.version>r938</jtidy.version>
